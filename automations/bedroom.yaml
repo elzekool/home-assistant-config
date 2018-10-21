@@ -78,6 +78,8 @@
     - service: input_select.select_next
       data:
         entity_id: input_select.bedroom_state_select
+        
+    - service: script.bedroom_apply_scene
 
 # --------------------------------------------------------------------
 # Turn bedroom lights off
@@ -107,10 +109,6 @@
           - light.bedlight_elze
           - light.bedlight_jolande
           - light.bedroom_standing_light
-    - service: switch.turn_off
-      data:
-        entity_id:
-          - switch.bedroom_remote_ch2
 
 # --------------------------------------------------------------------
 # Set Bedroom Scene to Full brightness
@@ -138,6 +136,8 @@
       data:
         entity_id: input_select.bedroom_state_select
         option: "Full brightness"
+        
+    - service: script.bedroom_apply_scene
 
 # --------------------------------------------------------------------
 # Set Bedroom Scene to All dimmed
@@ -165,64 +165,5 @@
       data:
         entity_id: input_select.bedroom_state_select
         option: "All dimmed"
-
-# --------------------------------------------------------------------
-# Bedroom scene changed
-#
-# Triggered when input_select changes state. Contains the actual
-# scene configuration. So make sure the scenes correspond to the
-# input_select!
-#
-# See scripts/bedroom.yaml
-# See automation_util/input_select.yaml
-# --------------------------------------------------------------------
-- id: bedroom_scene_change
-  alias: Bedroom process scene change
-  trigger:
-    - platform: state
-      entity_id: input_select.bedroom_state_select
-  condition: []
-  action:
+        
     - service: script.bedroom_apply_scene
-      data:
-        mappings:
-          "All dimmed":
-            "light.bedlight_elze": 
-              brightness: 30
-              color_temp: 383
-            "light.bedlight_jolande": 
-              brightness: 30
-              color_temp: 383
-            "light.bedroom_standing_light": 
-              brightness: 30
-              color_temp: 383
-          "Full brightness":
-            "light.bedlight_elze": 
-              brightness: 254
-              color_temp: 250
-            "light.bedlight_jolande": 
-              brightness: 254
-              color_temp: 250
-            "light.bedroom_standing_light": 
-              brightness: 254
-              color_temp: 250
-          "Bedlights dimmed":
-            "light.bedlight_elze": 
-              brightness: 30
-              color_temp: 454
-            "light.bedlight_jolande": 
-              brightness: 30
-              color_temp: 454
-            "light.bedroom_standing_light": 
-              brightness: 0
-              color_temp: 454
-          "Standinglight Dimmed":
-            "light.bedlight_elze": 
-              brightness: 0
-              color_temp: 383
-            "light.bedlight_jolande": 
-              brightness: 0
-              color_temp: 383
-            "light.bedroom_standing_light": 
-              brightness: 30
-              color_temp: 383

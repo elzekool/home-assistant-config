@@ -1,13 +1,64 @@
 # --------------------------------------------------------------------
 # Bedroom apply scene
 #
-# Apply bedroom scene. The scenes are defined by a input_select and
-# the configuration can be found in the automation.
+# Apply bedroom scene. The scene being applied is set by
+# input_select.bedroom_state_select
 #
 # See automations/bedroom.yaml
 # See automation_util/input_select.yaml
 # --------------------------------------------------------------------
 bedroom_apply_scene:
+  sequence:
+    - service: script.bedroom_apply_scene_with_data
+      data:
+        mappings:
+          "All dimmed":
+            "light.bedlight_elze": 
+              brightness: 30
+              color_temp: 383
+            "light.bedlight_jolande": 
+              brightness: 30
+              color_temp: 383
+            "light.bedroom_standing_light": 
+              brightness: 30
+              color_temp: 383
+          "Full brightness":
+            "light.bedlight_elze": 
+              brightness: 254
+              color_temp: 250
+            "light.bedlight_jolande": 
+              brightness: 254
+              color_temp: 250
+            "light.bedroom_standing_light": 
+              brightness: 254
+              color_temp: 250
+          "Bedlights dimmed":
+            "light.bedlight_elze": 
+              brightness: 30
+              color_temp: 454
+            "light.bedlight_jolande": 
+              brightness: 30
+              color_temp: 454
+            "light.bedroom_standing_light": 
+              brightness: 0
+              color_temp: 454
+          "Standinglight Dimmed":
+            "light.bedlight_elze": 
+              brightness: 0
+              color_temp: 383
+            "light.bedlight_jolande": 
+              brightness: 0
+              color_temp: 383
+            "light.bedroom_standing_light": 
+              brightness: 30
+              color_temp: 383
+
+# --------------------------------------------------------------------
+# Bedroom apply scene with data
+#
+# Called from script.bedroom_apply_scene, do not call directly
+# --------------------------------------------------------------------
+bedroom_apply_scene_with_data:
   sequence:
     - service_template: light.turn_on
       data_template:
@@ -36,3 +87,51 @@ bedroom_apply_scene:
         color_temp: >-
           {{ mappings[states('input_select.bedroom_state_select')]['light.bedroom_standing_light']['color_temp'] }}
         
+bedroom_scene_all_dimmed:
+  sequence:
+    - service: input_select.select_option
+      data:
+          entity_id: input_select.bedroom_state_select
+          option: "All dimmed"
+          
+    - service: script.bedroom_apply_scene
+      
+bedroom_scene_full_brightness:
+  sequence:
+    - service: input_select.select_option
+      data:
+          entity_id: input_select.bedroom_state_select
+          option: "Full brightness"
+          
+    - service: script.bedroom_apply_scene
+      
+bedroom_scene_bedlights_dimmed:
+  sequence:
+    - service: input_select.select_option
+      data:
+          entity_id: input_select.bedroom_state_select
+          option: "Bedlights dimmed"
+          
+    - service: script.bedroom_apply_scene
+      
+bedroom_scene_standinglight_dimmed:
+  sequence:
+    - service: input_select.select_option
+      data:
+          entity_id: input_select.bedroom_state_select
+          option: "Standinglight Dimmed"
+          
+    - service: script.bedroom_apply_scene
+      
+bedroom_scene_all_off:
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.bedlight_elze
+          - light.bedlight_jolande
+          - light.bedroom_standing_light
+    - service: switch.turn_off
+      data:
+        entity_id:
+          - switch.bedroom_remote_ch2

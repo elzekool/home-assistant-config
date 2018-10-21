@@ -3,7 +3,6 @@
 #
 # Not directly used, but in automation/script for scene toggle
 # See automations/bedroom.yaml
-# See scripts/bedroom.yaml
 # --------------------------------------------------------------------
 bedroom_state_select:
     name: Bedroom State Select

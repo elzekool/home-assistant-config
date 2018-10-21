@@ -13,6 +13,7 @@ bedroom:
   entities:
     - group.bedroom_general
     - group.bedroom_bedlights
+    - group.bedroom_scenes
 
 living_room:
   name: Woonkamer
@@ -130,6 +131,16 @@ bedroom_bedlights:
    entities:
      - light.bedlight_elze
      - light.bedlight_jolande
+
+bedroom_scenes:
+   name: "Scene's"
+   control: hidden
+   entities:
+     - script.bedroom_scene_all_dimmed
+     - script.bedroom_scene_full_brightness
+     - script.bedroom_scene_bedlights_dimmed
+     - script.bedroom_scene_standinglight_dimmed
+     - script.bedroom_scene_all_off
 
 hobby_jolande_ceiling_lights:
    name: Plafond

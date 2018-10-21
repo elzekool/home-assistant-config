@@ -71,3 +71,13 @@ light.hue_above_dining_table:
   friendly_name: Plafondlamp boven eettafel
 switch.ceiling_light_hobby_jolande:
   friendly_name: Plafondverlichting
+script.bedroom_scene_all_dimmed:
+  friendly_name: Alles gedimd
+script.bedroom_scene_all_off:
+  friendly_name: Alles uit
+script.bedroom_scene_bedlights_dimmed:
+  friendly_name: Bedlampen gedimd aan
+script.bedroom_scene_full_brightness:
+  friendly_name: Alles volledig aan
+script.bedroom_scene_standinglight_dimmed:
+  friendly_name: Sta lamp gedimd
