@@ -6,7 +6,7 @@ completely broken.. so you are warned.
 ## Architecture
 * Home Assistant running on a Raspberry Pi 3B
 * RFXtrx433XL USB 433.92MHz Transceiver
-* Hue Bridg
+* Hue Bridge
 * Trådfri Bridge
 * Eneco Toon Thermostat
 
