@@ -32,6 +32,12 @@ discovery:
 # Enable configuration
 config:
 
+# Configure notifications
+notify:
+  - platform: html5
+    gcm_api_key: !secret notify_gcm_api_key
+    gcm_sender_id: !secret notify_gcm_sender_id
+
 # History recorder
 recorder:
   purge_keep_days: 5
@@ -100,27 +106,27 @@ switch:
     
       # Convert Osram Smart+ plug into switch
       lego_starwars:
-        value_template: "{{ is_state('light.onoff_plug_1', 'on') }}"
+        value_template: "{{ is_state('light.hue_lego_starwars', 'on') }}"
         turn_on:
           service: light.turn_on
           data:
-            entity_id: light.onoff_plug_1
+            entity_id: light.hue_lego_starwars
         turn_off:
           service: light.turn_off
           data:
-            entity_id: light.onoff_plug_1
+            entity_id: light.hue_lego_starwars
       
       # Convert Osram Smart+ plug into switch      
       lego_display_boxes:
-        value_template: "{{ is_state('light.onoff_plug_2', 'on') }}"
+        value_template: "{{ is_state('light.hue_lego_display_boxes', 'on') }}"
         turn_on:
           service: light.turn_on
           data:
-            entity_id: light.onoff_plug_2
+            entity_id: light.hue_lego_display_boxes
         turn_off:
           service: light.turn_off
           data:
-            entity_id: light.onoff_plug_2
+            entity_id: light.hue_lego_display_boxes
       
 
 # Light configuration

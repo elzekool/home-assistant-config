@@ -77,7 +77,7 @@ living_room_standing_light:
 living_room_eating_room:
   name: Eetkamer
   entities:
-    - light.hue_white_lamp_1
+    - light.hue_above_dining_table
 
 living_room_other:
   name: Overige

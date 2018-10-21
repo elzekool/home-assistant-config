@@ -67,7 +67,7 @@ light.livingroom_standing_light_up_1:
   friendly_name: Woonkamer Sta Lamp (Righting achterkamer)
 light.livingroom_standing_light_up_2:
   friendly_name: Woonkamer Sta lamp (richting voorkamer)
-light.hue_white_lamp_1:
+light.hue_above_dining_table:
   friendly_name: Plafondlamp boven eettafel
 switch.ceiling_light_hobby_jolande:
   friendly_name: Plafondverlichting
