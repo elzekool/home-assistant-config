@@ -1,0 +1,11 @@
+{
+  "name": "Tileboard",
+  "short_name": "Tileboard",
+  "theme_color": "#2196f3",
+  "background_color": "#2196f3",
+  "display": "fullscreen",
+  "Scope": "/local/tileboard",
+  "start_url": "/local/tileboard/index.html",
+  "icons": null,
+  "splash_pages": null
+}
