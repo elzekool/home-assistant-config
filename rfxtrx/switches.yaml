@@ -1,0 +1,28 @@
+0b1100010087d9ba03010f50:
+  name: Bedroom Remote Ch3
+  fire_event: true
+
+0b1100060087d9ba02010f60:
+  name: Bedroom Remote Ch2
+  fire_event: true
+
+0b1100090087d9ba01010f60:
+  name: Bedroom Remote Ch1
+  fire_event: true
+
+0b110000008285320c010f60:
+  name: Bedroom Wall Switch Ch2
+  fire_event: true
+
+0b110000008285320b000050:
+  name: Bedroom Wall Switch Ch1
+  fire_event: true
+
+0b11001d008181ce0a000050:
+  name: Pantry Ceiling Light
+
+0b11000483bc0cfe02010f70:
+  name: Livingroom Showcase
+  
+0b1100010197a8fa0a000050:
+  name: Ceiling light hobby Jolande

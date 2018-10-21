@@ -1,0 +1,137 @@
+default_view:
+  name: Start
+  view: yes
+  entities:
+    - group.temperature_control
+    - group.usage
+    - group.weather
+    - group.date_time
+    
+bedroom:
+  name: Slaapkamer
+  view: yes
+  entities:
+    - group.bedroom_general
+    - group.bedroom_bedlights
+
+living_room:
+  name: Woonkamer
+  view: yes
+  entities:
+    - group.living_room_standing_light
+    - group.living_room_eating_room
+    - group.living_room_other
+
+hobby_room_elze:
+  name: Hobbykamer Elze
+  view: yes
+  entities:
+    - group.hobby_elze_ceiling_lights
+    - group.hobby_elze_lego
+
+hobby_room_jolande:
+  name: Hobbykamer Jolande
+  view: yes
+  entities:
+    - group.hobby_jolande_ceiling_lights
+
+other_rooms:
+   name: Overige
+   view: yes
+   entities:
+    - group.hallway_lights
+    - group.outside_lights
+    - group.pantry_lights
+
+date_time:
+  name: Datum en tijd
+  entities:
+    - sensor.time
+    - sensor.date
+
+usage:
+  name: Verbruik
+  entities:
+    - sensor.power_current
+    - sensor.gas_today  
+
+weather:
+  name: Weer
+  entities:
+    - sensor.br_symbol
+    - sensor.br_temperature
+    - sensor.br_humidity    
+
+temperature_control:
+  name: Thermostaat
+  entities:
+     - climate.toon_van_eneco
+
+living_room_standing_light:
+  name: Sta lamp
+  entities:
+    - light.livingroom_standing_light_down
+    - light.livingroom_standing_light_up_1
+    - light.livingroom_standing_light_up_2
+    
+living_room_eating_room:
+  name: Eetkamer
+  entities:
+    - light.hue_white_lamp_1
+
+living_room_other:
+  name: Overige
+  control: hidden
+  entities:
+     - light.hue_bloom_1
+     - switch.livingroom_showcase
+
+hobby_elze_ceiling_lights:
+  name: Plafond
+  entities:
+     - light.hue_hobby_ceiling_light_1
+     - light.hue_hobby_ceiling_light_2
+
+hobby_elze_lego:
+  name: Lego verlichting
+  entities:
+     - switch.lego_above_desk
+     - switch.lego_window_side
+     - switch.lego_starwars
+     - switch.lego_display_boxes
+
+pantry_lights:
+   name: Bijkeuken
+   control: hidden
+   entities:
+     - switch.pantry_ceiling_light
+
+hallway_lights:
+   name: Gang
+   control: hidden
+   entities:
+     - light.hallway_lights
+
+outside_lights:
+   name: Buiten verlichting
+   control: hidden
+   entities:
+     - light.garden
+
+bedroom_general:
+  name: Algemeen
+  control: hidden
+  entities:
+     - switch.bedroom_remote_ch2
+     - light.bedroom_standing_light
+
+bedroom_bedlights:
+   name: Nachtlampen
+   entities:
+     - light.bedlight_elze
+     - light.bedlight_jolande
+
+hobby_jolande_ceiling_lights:
+   name: Plafond
+   entities:
+     - switch.ceiling_light_hobby_jolande

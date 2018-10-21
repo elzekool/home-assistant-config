@@ -1,0 +1,141 @@
+# Home assitant base configuration
+homeassistant:
+  name: !secret home_name
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: 0
+  unit_system: metric
+  time_zone: Europe/Amsterdam
+  customize: !include customize.yaml
+
+# Frontend configuration
+frontend:
+  themes:
+    dark:
+      primary-color: "#263238"
+
+# HTTP configuration
+http:
+  base_url: !secret http_base_url
+  ssl_certificate: /ssl/fullchain.pem
+  ssl_key: /ssl/privkey.pem
+  ip_ban_enabled: true
+  login_attempts_threshold: 10
+
+# Checks for available updates
+updater:
+  include_used_components: true
+
+# Discover some devices automatically
+discovery:
+
+# Enable configuration
+config:
+
+# History recorder
+recorder:
+  purge_keep_days: 5
+  purge_interval: 1
+  include:
+    entities:
+      - climate.toon_van_eneco
+      - sensor.br_humidity
+      - sensor.br_symbol
+      - sensor.br_temperature
+      - sensor.power_current
+      - sensor.power_today
+      - sensor.gas_current
+      - sensor.gas_today  
+
+# History display
+history:
+  include:
+    entities:
+      - climate.toon_van_eneco
+      - sensor.br_humidity
+      - sensor.br_symbol
+      - sensor.br_temperature
+      - sensor.power_current
+      - sensor.power_today
+      - sensor.gas_current
+      - sensor.gas_today
+
+# Track the sun
+sun:
+
+# Weather prediction
+sensor:
+  - platform: buienradar
+    monitored_conditions:
+      - symbol
+      - humidity
+      - temperature
+  - platform: time_date
+    display_options:
+      - date
+      - time
+
+# Cloud
+cloud:
+
+# Eneco Toon
+toon:
+  username: !secret toon_username
+  password: !secret toon_password
+  consumer_key: !secret toon_consumer_key
+  consumer_secret: !secret toon_consumer_secret
+
+# RFXCom Hub
+rfxtrx:
+  device: /dev/ttyUSB0
+
+# Switches
+switch:
+  - platform: rfxtrx
+    automatic_add: false
+    devices: !include rfxtrx/switches.yaml
+
+  - platform: template
+    switches:    
+    
+      # Convert Osram Smart+ plug into switch
+      lego_starwars:
+        value_template: "{{ is_state('light.onoff_plug_1', 'on') }}"
+        turn_on:
+          service: light.turn_on
+          data:
+            entity_id: light.onoff_plug_1
+        turn_off:
+          service: light.turn_off
+          data:
+            entity_id: light.onoff_plug_1
+      
+      # Convert Osram Smart+ plug into switch      
+      lego_display_boxes:
+        value_template: "{{ is_state('light.onoff_plug_2', 'on') }}"
+        turn_on:
+          service: light.turn_on
+          data:
+            entity_id: light.onoff_plug_2
+        turn_off:
+          service: light.turn_off
+          data:
+            entity_id: light.onoff_plug_2
+      
+
+# Light configuration
+light:
+  - platform: group
+    name: Hobby ceiling lights
+    entities:
+      - light.hue_hobby_ceiling_light_1
+      - light.hue_hobby_ceiling_light_2
+
+  - platform: rfxtrx
+    automatic_add: false
+    devices: !include rfxtrx/lights.yaml
+    
+    
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml

@@ -1,0 +1,73 @@
+sensor.yr_symbol:
+  hidden: true
+light.hobby:
+  hidden: true
+group.all_lights: {}
+sensor.gas_current:
+  friendly_name: Huidig gas verbruik
+  hidden: true
+sensor.power_today:
+  friendly_name: Power used today
+  hidden: true
+climate.toon_van_eneco:
+  friendly_name: Toon
+sensor.power_current:
+  friendly_name: Huidig stroom verbruik
+sensor.gas_today:
+  friendly_name: Gas verbruik vandaag
+sensor.br_humidity:
+  friendly_name: Luchtvochtigheid (buiten)
+sensor.br_symbol:
+  friendly_name: Weer
+sensor.br_temperature:
+  friendly_name: Temperatuur (buiten)
+sun.sun:
+  friendly_name: Zonnestand
+  hidden: true
+light.livingroom:
+  friendly_name: Woonkamer
+sensor.time:
+  friendly_name: Tijd
+sensor.date:
+  friendly_name: Datum
+zone.home: {}
+light.hue_hobby_ceiling_light_1:
+  friendly_name: Plafondlamp 1
+light.hue_hobby_ceiling_light_2:
+  friendly_name: Plafondlamp 2
+light.hue_bloom_1:
+  friendly_name: Sfeerlamp
+switch.livingroom_showcase:
+  friendly_name: Vitrinekast
+switch.pantry_ceiling_light:
+  friendly_name: Plafond verlichting
+switch.bedroom_remote_ch2:
+  friendly_name: Televisie
+light.bedlight_elze:
+  friendly_name: Nachtlamp Elze
+light.bedlight_jolande:
+  friendly_name: Nachtlamp Jolande
+light.bedroom_standing_light:
+  friendly_name: Staande lamp
+switch.lego_display_boxes:
+  friendly_name: Lego vitrines
+switch.lego_starwars:
+  friendly_name: Lego Starwars
+switch.lego_window_side:
+  friendly_name: Lego raam kant
+switch.lego_above_desk:
+  friendly_name: Lego boven bureau
+light.garden:
+  friendly_name: Tuinlampen
+light.hallway_lights:
+  friendly_name: Gang lampen
+light.livingroom_standing_light_down:
+  friendly_name: Woonkamer Sta lamp (Leeslamp)
+light.livingroom_standing_light_up_1:
+  friendly_name: Woonkamer Sta Lamp (Righting achterkamer)
+light.livingroom_standing_light_up_2:
+  friendly_name: Woonkamer Sta lamp (richting voorkamer)
+light.hue_white_lamp_1:
+  friendly_name: Plafondlamp boven eettafel
+switch.ceiling_light_hobby_jolande:
+  friendly_name: Plafondverlichting
