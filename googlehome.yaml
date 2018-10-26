@@ -1,0 +1,40 @@
+filter:
+  include_entities:
+    - light.hobby_ceiling_lights
+    - switch.all_lego
+    - light.kitchen_ceiling_lights
+    - light.dining_lamp
+    - light.livingroom_standing_light
+    - light.livingroom_standing_light_down
+    - script.livingroom_dimmed
+    - script.livingroom_off
+    
+entity_config:
+  light.hobby_ceiling_lights:
+    name: Hobby kamer Elze
+    
+  switch.all_lego:
+    name: Lego
+    
+  light.kitchen_ceiling_lights:
+    name: Plafond lampen keuken
+    aliases:
+      - Keuken verlichting
+      
+  light.livingroom_standing_light:
+    name: Stalamp woonkamer
+    
+  light.livingroom_standing_light_down:
+    name: Leeslamp woonkamer
+    
+  light.dining_lamp:
+    name: Eetkamer lamp
+    aliases:
+      - Lamp boven de tafel
+      
+  script.livingroom_dimmed:
+    name: Gezellig in woonkamer
+    
+  script.livingroom_off:
+    name: Alles uit in woonkamer
+    

@@ -1,0 +1,6 @@
+filter:
+  include_entities:
+    - light.hobby_ceiling_lights
+entity_config:
+  light.hobby_ceiling_lights:
+    name: Hobby

@@ -22,7 +22,15 @@ living_room:
     - group.living_room_standing_light
     - group.living_room_eating_room
     - group.living_room_other
-
+    - group.living_room_scenes
+    
+kitchen:
+  name: Keuken
+  view: yes
+  entities:
+    - group.kitchen_cabinets
+    - group.kitchen_ceiling_lights
+    
 hobby_room_elze:
   name: Hobbykamer Elze
   view: yes
@@ -78,7 +86,7 @@ living_room_standing_light:
 living_room_eating_room:
   name: Eetkamer
   entities:
-    - light.hue_above_dining_table
+    - light.dining_lamp
 
 living_room_other:
   name: Overige
@@ -86,6 +94,27 @@ living_room_other:
   entities:
      - light.hue_bloom_1
      - switch.livingroom_showcase
+     
+living_room_scenes:
+   name: "Scene's"
+   control: hidden
+   entities:
+     - script.livingroom_all_off
+     - script.livingroom_full_on
+     - script.livingroom_dimmed
+
+kitchen_cabinets:
+  name: Keuken kastjes
+  control: hidden
+  entities:
+    - light.kitchen_cabinets
+
+kitchen_ceiling_lights:
+  name: Plafond
+  entities:
+    - light.kitchen_light_1
+    - light.kitchen_light_2
+    - light.kitchen_light_3
 
 hobby_elze_ceiling_lights:
   name: Plafond
@@ -127,8 +156,8 @@ bedroom_general:
      - light.bedroom_standing_light
 
 bedroom_bedlights:
-   name: Nachtlampen
-   entities:
+  name: Nachtlampen
+  entities:
      - light.bedlight_elze
      - light.bedlight_jolande
 

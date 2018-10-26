@@ -81,3 +81,17 @@ script.bedroom_scene_full_brightness:
   friendly_name: Alles volledig aan
 script.bedroom_scene_standinglight_dimmed:
   friendly_name: Sta lamp gedimd
+script.livingroom_all_off:
+  friendly_name: Alles uit
+script.livingroom_full_on:
+  friendly_name: Alles vol aan
+script.livingroom_dimmed:
+  friendly_name: Gezellig
+light.kitchen_cabinets:
+  friendly_name: Onder keukenkastjes
+light.kitchen_light_1:
+  friendly_name: Plafondlamp 1
+light.kitchen_light_2:
+  friendly_name: Plafondlamp 2
+light.kitchen_light_3:
+  friendly_name: Plafondlamp 3

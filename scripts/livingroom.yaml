@@ -6,7 +6,7 @@ livingroom_all_off:
           - light.livingroom_standing_light_down
           - light.livingroom_standing_light_up_1
           - light.livingroom_standing_light_up_2
-          - light.hue_above_dining_table
+          - light.dining_lamp
           - light.hue_bloom_1
     - service: switch.turn_off
       data:
@@ -21,35 +21,46 @@ livingroom_full_on:
           - light.livingroom_standing_light_down
           - light.livingroom_standing_light_up_1
           - light.livingroom_standing_light_up_2
-          - light.hue_above_dining_table
-        brightness: 255
+        brightness: 254
+        color_temp: 279
+      
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.dining_lamp
+          - light.hue_bloom_1
+        brightness: 254
+        hs_color: [ 29.999,42.856 ]
+
           
 livingroom_dimmed:
   sequence:
-    - service: light.turn_on
+    - service: light.turn_off
       data:
         entity_id:
           - light.livingroom_standing_light_down
-        brightness: 10
+          - light.livingroom_standing_light_up_1
           
     - service: light.turn_on
       data:
         entity_id:
-          - light.livingroom_standing_light_up_1
           - light.livingroom_standing_light_up_2
         brightness: 50
-        
+        color_temp: 454
+
     - service: light.turn_on
       data:
         entity_id:
-          - light.hue_above_dining_table
-        brightness: 128
+          - light.dining_lamp
+        brightness: 80
+        hs_color: [ 360,85.714 ]
         
     - service: light.turn_on
       data:
         entity_id:
           - light.hue_bloom_1
-        brightness: 255
+        brightness: 110
+        hs_color: [ 32.105, 89.412 ]
         
     - service: switch.turn_on
       data:

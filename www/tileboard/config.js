@@ -225,7 +225,7 @@ var CONFIG = {
                      position: [0, 0],
                      width: 1,
                      type: TYPES.LIGHT,
-                     id: 'light.hue_above_dining_table',
+                     id: 'light.dining_lamp',
                      title: 'Boven tafel',
                      states: {
                         on: "Aan",
