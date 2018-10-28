@@ -116,7 +116,7 @@ switch:
     
       # Create special All Lego switch
       all_lego:
-        value_template: "{{ is_state('switch.lego_above_desk', 'on') or is_state('switch.lego_window_side', 'on') or is_state('switch.lego_starwars', 'on') or is_state('switch.lego_display_boxes', 'on') }}"
+        value_template: "{{ is_state('switch.lego_bookcase', 'on') or is_state('switch.lego_above_desk', 'on') or is_state('switch.lego_window_side', 'on') or is_state('switch.lego_starwars', 'on') or is_state('switch.lego_display_boxes', 'on') }}"
         turn_on:
           service: switch.turn_on
           data:
