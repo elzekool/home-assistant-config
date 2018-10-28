@@ -125,6 +125,7 @@ switch:
               - switch.lego_window_side
               - switch.lego_starwars
               - switch.lego_display_boxes
+              - switch.lego_bookcase
         turn_off:
           service: switch.turn_off
           data:
@@ -133,6 +134,7 @@ switch:
               - switch.lego_window_side
               - switch.lego_starwars
               - switch.lego_display_boxes
+              - switch.lego_bookcase
       
 # Light configuration
 light:

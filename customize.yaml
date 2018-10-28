@@ -100,3 +100,5 @@ light.upper_hallway_ceiling_light:
   friendly_name: Plafondlamp
 switch.garden_wall_mounted_light:
   friendly_name: Muurlamp
+switch.lego_bookcase:
+  friendly_name: Lego boekenkast

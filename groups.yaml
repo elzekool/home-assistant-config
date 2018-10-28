@@ -130,6 +130,7 @@ hobby_elze_lego:
      - switch.lego_window_side
      - switch.lego_starwars
      - switch.lego_display_boxes
+     - switch.lego_bookcase
 
 pantry_lights:
    name: Bijkeuken
