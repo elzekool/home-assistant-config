@@ -7,7 +7,7 @@ livingroom_all_off:
           - light.livingroom_standing_light_up_1
           - light.livingroom_standing_light_up_2
           - light.dining_lamp
-          - light.hue_bloom_1
+          - light.livingroom_atmosphere
     - service: switch.turn_off
       data:
         entity_id:
@@ -28,7 +28,7 @@ livingroom_full_on:
       data:
         entity_id:
           - light.dining_lamp
-          - light.hue_bloom_1
+          - light.livingroom_atmosphere
         brightness: 254
         hs_color: [ 29.999,42.856 ]
 
@@ -58,7 +58,7 @@ livingroom_dimmed:
     - service: light.turn_on
       data:
         entity_id:
-          - light.hue_bloom_1
+          - light.livingroom_atmosphere
         brightness: 110
         hs_color: [ 32.105, 89.412 ]
         

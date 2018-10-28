@@ -1,0 +1,101 @@
+# --------------------------------------------------------------------
+# Turn upper hallway light on
+#
+# Wall Remote Downstairs - On
+# Wall Remote Upstairs   - On
+# 
+# Turn upper hallway light on, brightness is determined by 
+# time of day
+# --------------------------------------------------------------------
+- id: upper_hallway_lights_on
+  alias: Turn on upper hallway light when on button is pressed
+  trigger:
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.upper_hallway_ceiling_light_switch_upstairs
+        state: 'on'
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.upper_hallway_ceiling_light_switch_downstairs
+        state: 'on'
+  condition:
+    - condition: state
+      entity_id: light.upper_hallway_ceiling_light
+      state: 'off'
+  action:
+    - service: light.turn_on
+      data_template:
+        entity_id:
+          - light.upper_hallway_ceiling_light
+        brightness: >-
+          {% set brightness = 128 %}
+          {% if now().hour >= 18 %}
+            {% set brightness = 96 %}
+          {% endif %}
+          {% if now().hour >= 23 %}
+            {% set brightness = 64 %}
+          {% endif %}
+          {{ brightness }}
+
+# --------------------------------------------------------------------
+# Turn upper hallway light on to full brightness
+#
+# Wall Remote Downstairs - On
+# Wall Remote Upstairs   - On
+# 
+# Turn upper hallway light on to full brightness when on
+# button is pressed and the light is currently already on
+# --------------------------------------------------------------------
+- id: upper_hallway_lights_on_full_on_second_press
+  alias: Turn on upper hallway light full when on button is pressed and light is already on
+  trigger:
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.upper_hallway_ceiling_light_switch_upstairs
+        state: 'on'
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.upper_hallway_ceiling_light_switch_downstairs
+        state: 'on'
+  condition:
+    - condition: state
+      entity_id: light.upper_hallway_ceiling_light
+      state: 'on'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id:
+          - light.upper_hallway_ceiling_light
+        brightness: 254
+        
+# --------------------------------------------------------------------
+# Turn upper hallway light off
+#
+# Wall Remote Downstairs - Off
+# Wall Remote Upstairs   - Off
+# 
+# Turn upper hallway light off
+# --------------------------------------------------------------------
+- id: upper_hallway_lights_off
+  alias: Turn on upper hallway light when off button is pressed
+  trigger:
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.upper_hallway_ceiling_light_switch_upstairs
+        state: 'off'
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.upper_hallway_ceiling_light_switch_downstairs
+        state: 'off'
+  condition: []
+  action:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.upper_hallway_ceiling_light

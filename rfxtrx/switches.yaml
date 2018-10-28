@@ -26,3 +26,18 @@
   
 0b1100010197a8fa0a000050:
   name: Ceiling light hobby Jolande
+  
+0b11000201b356ae0a000050:
+  name: Upper Hallway Ceiling Light Switch Upstairs
+  fire_event: true
+  
+0b11000c01b34c1e0a000050:
+  name: Upper Hallway Ceiling Light Switch Downstairs
+  fire_event: true
+  
+'0710010945030150':
+  name: Garden wall mounted light
+  
+0b1100000173997a01040f50:
+  name: Doorbell front door
+  fire_event: true

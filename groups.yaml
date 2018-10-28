@@ -49,6 +49,7 @@ other_rooms:
    view: yes
    entities:
     - group.hallway_lights
+    - group.upper_hallway
     - group.outside_lights
     - group.pantry_lights
 
@@ -92,9 +93,9 @@ living_room_other:
   name: Overige
   control: hidden
   entities:
-     - light.hue_bloom_1
+     - light.livingroom_atmosphere
      - switch.livingroom_showcase
-     
+
 living_room_scenes:
    name: "Scene's"
    control: hidden
@@ -119,8 +120,8 @@ kitchen_ceiling_lights:
 hobby_elze_ceiling_lights:
   name: Plafond
   entities:
-     - light.hue_hobby_ceiling_light_1
-     - light.hue_hobby_ceiling_light_2
+     - light.hobby_elze_ceiling_light_1
+     - light.hobby_elze_ceiling_light_2
 
 hobby_elze_lego:
   name: Lego verlichting
@@ -142,12 +143,19 @@ hallway_lights:
    entities:
      - light.hallway_lights
 
-outside_lights:
-   name: Buiten verlichting
+upper_hallway:
+   name: Hal boven
    control: hidden
    entities:
-     - light.garden
+     - light.upper_hallway_ceiling_light
 
+outside_lights:
+   name: Tuin verlichting
+   control: hidden
+   entities:
+     - switch.garden_wall_mounted_light
+     - light.garden
+     
 bedroom_general:
   name: Algemeen
   control: hidden

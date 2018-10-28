@@ -1,0 +1,13 @@
+- id: notify_doorbell_front_door_pressed
+  alias: Notify everybody that someone is at the door
+  trigger:
+    - event_type: button_pressed
+      platform: event
+      event_data:
+        entity_id: switch.doorbell_front_door
+  condition: []
+  action:
+    - service: notify.notify
+      data_template:
+        message: >-
+          {{ now().hour|string + ":" + ("%02d" % now().minute) + ": Iemand aan de voordeur!" }}

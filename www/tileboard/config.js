@@ -118,6 +118,19 @@ var CONFIG = {
                               service: "turn_on",
                               field: "brightness"
                            }
+                        },
+                        {
+                           title: 'Kleurtemperatuur',
+                           field: 'color_temp',
+                           max: 454,
+                           min: 250,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "color_temp"
+                           }
                         }
                      ]
                   },
@@ -147,6 +160,19 @@ var CONFIG = {
                               domain: "light",
                               service: "turn_on",
                               field: "brightness"
+                           }
+                        },
+                        {
+                           title: 'Kleurtemperatuur',
+                           field: 'color_temp',
+                           max: 454,
+                           min: 250,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "color_temp"
                            }
                         }
                      ]
@@ -179,6 +205,19 @@ var CONFIG = {
                               service: "turn_on",
                               field: "brightness"
                            }
+                        },
+                        {
+                           title: 'Kleurtemperatuur',
+                           field: 'color_temp',
+                           max: 454,
+                           min: 250,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "color_temp"
+                           }
                         }
                      ]
                   },
@@ -187,7 +226,7 @@ var CONFIG = {
                      position: [1, 1],
                      width: 1,
                      type: TYPES.LIGHT,
-                     id: 'light.hue_bloom_1',
+                     id: 'light.livingroom_atmosphere',
                      title: 'Sfeerlicht',
                      states: {
                         on: "Aan",
@@ -267,6 +306,125 @@ var CONFIG = {
                      }
                   }
                   
+               ]
+            },
+            {
+               title: 'Keuken',
+               width: 2,
+               height: 1,
+               items: [
+                  {
+                     position: [0, 0],
+                     width: 1,
+                     type: TYPES.LIGHT,
+                     id: 'light.kitchen_cabinets',
+                     title: 'Onder keukenkastjes',
+                     states: {
+                        on: "Aan",
+                        off: "Uit"
+                     },
+                     icons: {
+                        on: "mdi-lightbulb-on",
+                        off: "mdi-lightbulb",
+                     },
+                     sliders: [
+                        {
+                           title: 'Helderheid',
+                           field: 'brightness',
+                           max: 255,
+                           min: 0,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "brightness"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     position: [1 ,0],
+                     width: 1,
+                     type: TYPES.LIGHT,
+                     id: 'light.kitchen_ceiling_lights',
+                     title: 'Plafondlampen',
+                     states: {
+                        on: "Aan",
+                        off: "Uit"
+                     },
+                     icons: {
+                        on: "mdi-lightbulb-on",
+                        off: "mdi-lightbulb",
+                     },
+                     sliders: [
+                        {
+                           title: 'Helderheid',
+                           field: 'brightness',
+                           max: 255,
+                           min: 0,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "brightness"
+                           }
+                        }
+                     ]
+                  }
+               ]
+            },
+            {
+               title: 'Tuin',
+               width: 2,
+               height: 1,
+               items: [
+                  {
+                     position: [0, 0],
+                     width: 1,
+                     type: TYPES.LIGHT,
+                     id: 'light.garden',
+                     title: 'Tuinlampen',
+                     states: {
+                        on: "Aan",
+                        off: "Uit"
+                     },
+                     icons: {
+                        on: "mdi-lightbulb-on",
+                        off: "mdi-lightbulb",
+                     },
+                     sliders: [
+                        {
+                           title: 'Helderheid',
+                           field: 'brightness',
+                           max: 255,
+                           min: 0,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "brightness"
+                           }
+                        }
+                     ]
+                  },
+                  {
+                     position: [1, 0],
+                     width: 1,
+                     type: TYPES.SWITCH,
+                     id: 'switch.garden_wall_mounted_light',
+                     title: 'Muurlamp',
+                     states: {
+                        on: "Aan",
+                        off: "Uit"
+                     },
+                     icons: {
+                        on: "mdi-lightbulb-on",
+                        off: "mdi-lightbulb",
+                     }
+                  }
                ]
             }
          ]

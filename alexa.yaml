@@ -1,6 +1,31 @@
 filter:
   include_entities:
     - light.hobby_ceiling_lights
+    - switch.all_lego
+    - light.kitchen_cabinets
+    - light.kitchen_ceiling_lights
+    - light.dining_lamp
+    - light.livingroom_standing_light
+    - light.livingroom_standing_light_down
+
 entity_config:
   light.hobby_ceiling_lights:
     name: Hobby
+    
+  switch.all_lego:
+    name: Lego
+    
+  light.kitchen_ceiling_lights:
+    name: Ceiling lights kitchen
+      
+  light.kitchen_cabinets:
+    name: Cabinet lights kitchen
+      
+  light.livingroom_standing_light:
+    name: Floorlamp livingroom
+    
+  light.livingroom_standing_light_down:
+    name: Reading light
+    
+  light.dining_lamp:
+    name: Dining room

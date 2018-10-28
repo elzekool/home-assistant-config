@@ -139,8 +139,8 @@ light:
   - platform: group
     name: Hobby ceiling lights
     entities:
-      - light.hue_hobby_ceiling_light_1
-      - light.hue_hobby_ceiling_light_2
+      - light.hobby_elze_ceiling_light_1
+      - light.hobby_elze_ceiling_light_2
       
   - platform: group
     name: Kitchen ceiling lights

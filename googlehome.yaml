@@ -2,6 +2,7 @@ filter:
   include_entities:
     - light.hobby_ceiling_lights
     - switch.all_lego
+    - light.kitchen_cabinets
     - light.kitchen_ceiling_lights
     - light.dining_lamp
     - light.livingroom_standing_light
@@ -11,15 +12,18 @@ filter:
     
 entity_config:
   light.hobby_ceiling_lights:
-    name: Hobby kamer Elze
+    name: Hobbykamer Elze
     
   switch.all_lego:
     name: Lego
     
   light.kitchen_ceiling_lights:
-    name: Plafond lampen keuken
+    name: Plafondlampen keuken
     aliases:
       - Keuken verlichting
+      
+  light.kitchen_cabinets:
+    name: Keukenkastjes
       
   light.livingroom_standing_light:
     name: Stalamp woonkamer

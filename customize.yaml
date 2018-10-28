@@ -31,11 +31,11 @@ sensor.time:
 sensor.date:
   friendly_name: Datum
 zone.home: {}
-light.hue_hobby_ceiling_light_1:
+light.hobby_elze_ceiling_light_1:
   friendly_name: Plafondlamp 1
-light.hue_hobby_ceiling_light_2:
+light.hobby_elze_ceiling_light_2:
   friendly_name: Plafondlamp 2
-light.hue_bloom_1:
+light.livingroom_atmosphere:
   friendly_name: Sfeerlamp
 switch.livingroom_showcase:
   friendly_name: Vitrinekast
@@ -95,3 +95,8 @@ light.kitchen_light_2:
   friendly_name: Plafondlamp 2
 light.kitchen_light_3:
   friendly_name: Plafondlamp 3
+switch.doorbell_front_door: {}
+light.upper_hallway_ceiling_light:
+  friendly_name: Plafondlamp
+switch.garden_wall_mounted_light:
+  friendly_name: Muurlamp
