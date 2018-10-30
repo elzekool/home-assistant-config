@@ -34,7 +34,7 @@
           {% if now().hour >= 18 %}
             {% set brightness = 96 %}
           {% endif %}
-          {% if now().hour >= 23 %}
+          {% if now().hour >= 23 or now().hour <= 6 %}
             {% set brightness = 64 %}
           {% endif %}
           {{ brightness }}

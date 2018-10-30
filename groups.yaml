@@ -143,6 +143,8 @@ hallway_lights:
    control: hidden
    entities:
      - light.hallway_lights
+     - timer.downstairs_hallway
+     - light.hallway_light_near_front_door
 
 upper_hallway:
    name: Hal boven

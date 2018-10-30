@@ -41,3 +41,7 @@
 0b1100000173997a01040f50:
   name: Doorbell front door
   fire_event: true
+  
+0b1100000065a5360a000050:
+  name: Downstairs Hallway Wall Light
+  fire_event: true

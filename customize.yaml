@@ -60,7 +60,7 @@ switch.lego_above_desk:
 light.garden:
   friendly_name: Tuinlampen
 light.hallway_lights:
-  friendly_name: Gang lampen
+  friendly_name: Lampen aan muur
 light.livingroom_standing_light_down:
   friendly_name: Woonkamer Sta lamp (Leeslamp)
 light.livingroom_standing_light_up_1:
@@ -102,3 +102,7 @@ switch.garden_wall_mounted_light:
   friendly_name: Muurlamp
 switch.lego_bookcase:
   friendly_name: Lego boekenkast
+timer.downstairs_hallway:
+  friendly_name: Timer tot uitschakeling
+light.hallway_light_near_front_door:
+  friendly_name: Lamp bij voordeur

@@ -152,6 +152,12 @@ light:
       - light.kitchen_light_3
       
   - platform: group
+    name: Hallway lights
+    entities:
+      - light.downstairs_hallway_wall_light_1
+      - light.downstairs_hallwall_wall_light_2
+      
+  - platform: group
     name: Livingroom Standing Light
     entities:
       - light.livingroom_standing_light_down
@@ -164,6 +170,7 @@ light:
 
 
 input_select: !include automation_util/input_select.yaml
+timer: !include automation_util/timer.yaml
 group: !include groups.yaml
 automation: !include_dir_merge_list automations
 script: !include_dir_merge_named scripts
