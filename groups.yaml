@@ -21,6 +21,7 @@ living_room:
   entities:
     - group.living_room_standing_light
     - group.living_room_eating_room
+    - group.living_room_fireplace
     - group.living_room_other
     - group.living_room_scenes
     
@@ -95,6 +96,16 @@ living_room_other:
   entities:
      - light.livingroom_atmosphere
      - switch.livingroom_showcase
+     
+living_room_fireplace:
+  name: Open haard
+  control: hidden
+  entities:
+     - script.fireplace_off
+     - script.fireplace_low
+     - script.fireplace_high
+     - sensor.fireplace_heater_state
+     - light.fireplace
 
 living_room_scenes:
    name: "Scene's"

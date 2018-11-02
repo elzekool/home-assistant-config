@@ -66,3 +66,24 @@ livingroom_dimmed:
       data:
         entity_id:
           - switch.livingroom_showcase
+
+fireplace_off:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/fireplace/heater/state_cmd"
+        payload: "OFF"
+        
+fireplace_low:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/fireplace/heater/state_cmd"
+        payload: "LOW"
+        
+fireplace_high:
+  sequence:
+    - service: mqtt.publish
+      data:
+        topic: "/fireplace/heater/state_cmd"
+        payload: "HIGH"

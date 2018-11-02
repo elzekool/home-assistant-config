@@ -106,3 +106,13 @@ timer.downstairs_hallway:
   friendly_name: Timer tot uitschakeling
 light.hallway_light_near_front_door:
   friendly_name: Lamp bij voordeur
+light.fireplace:
+  friendly_name: Verlichting
+sensor.fireplace_heater_state:
+  friendly_name: Stand verwarming
+script.fireplace_off:
+  friendly_name: Verwarming uit
+script.fireplace_low:
+  friendly_name: Verwarming laag
+script.fireplace_high:
+  friendly_name: Verwarming hoog
