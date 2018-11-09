@@ -38,6 +38,7 @@ hobby_room_elze:
   entities:
     - group.hobby_elze_ceiling_lights
     - group.hobby_elze_lego
+    - group.hobby_elze_octoprint
 
 hobby_room_jolande:
   name: Hobbykamer Jolande
@@ -143,6 +144,18 @@ hobby_elze_lego:
      - switch.lego_display_boxes
      - switch.lego_bookcase
 
+hobby_elze_octoprint:
+  name: 3D Printer
+  entities:
+    - camera.octoprint
+    - sensor.octoprint_current_state
+    - sensor.octoprint_job_percentage
+    - sensor.octoprint_time_remaining
+    - sensor.octoprint_actual_bed_temp
+    - sensor.octoprint_target_bed_temp
+    - sensor.octoprint_actual_tool0_temp
+    - sensor.octoprint_target_tool0_temp
+    
 pantry_lights:
    name: Bijkeuken
    control: hidden

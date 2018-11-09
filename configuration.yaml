@@ -122,6 +122,21 @@ toon:
 # RFXCom Hub
 rfxtrx:
   device: /dev/ttyUSB0
+  
+# Octoprint
+octoprint:
+  host: !secret octoprint_host
+  api_key: !secret octoprint_api_key
+  bed: true
+  number_of_tools: 1
+
+# Octoprint camera  
+camera:
+  - platform: mjpeg
+    name: OctoPrint
+    still_image_url: !secret octoprint_still_image_url
+    mjpeg_url: !secret octoprint_mjpeg_url
+  
 
 # Switches
 switch:
