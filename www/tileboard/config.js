@@ -84,6 +84,7 @@ var CONFIG = {
                   },
                ]
             },
+            
             {
                title: 'Voorkamer',
                width: 2,
@@ -255,6 +256,7 @@ var CONFIG = {
                   
                ]
             },
+            
             {
                title: 'Eetkamer',
                width: 2,
@@ -308,6 +310,78 @@ var CONFIG = {
                   
                ]
             },
+            
+            {
+               title: 'Open haard',
+               width: 2,
+               height: 2,
+               items: [
+                  {
+                     position: [0, 0],
+                     title: "Uit",
+                     type: TYPES.SCRIPT,
+                     id: 'script.fireplace_off',
+                     icons: {
+                        on: "mdi-fire",
+                        off: "mdi-fire"
+                     },
+                     state: false
+                  },
+                  {
+                     position: [1, 0],
+                     title: "Laag",
+                     type: TYPES.SCRIPT,
+                     id: 'script.fireplace_low',
+                     icons: {
+                        on: "mdi-fire",
+                        off: "mdi-fire"
+                     },
+                     state: false
+                  },
+                  {
+                     position: [0, 1],
+                     title: "Hoog",
+                     type: TYPES.SCRIPT,
+                     id: 'script.fireplace_high',
+                     icons: {
+                        on: "mdi-fire",
+                        off: "mdi-fire"
+                     },
+                     state: false
+                  },
+                  {
+                     position: [1, 1],
+                     width: 1,
+                     type: TYPES.LIGHT,
+                     id: 'light.fireplace',
+                     title: 'Verlichting',
+                     states: {
+                        on: "Aan",
+                        off: "Uit"
+                     },
+                     icons: {
+                        on: "mdi-lightbulb-on",
+                        off: "mdi-lightbulb",
+                     },
+                     sliders: [
+                        {
+                           title: 'Helderheid',
+                           field: 'brightness',
+                           max: 255,
+                           min: 0,
+                           step: 5,
+                           request: {
+                              type: "call_service",
+                              domain: "light",
+                              service: "turn_on",
+                              field: "brightness"
+                           }
+                        }
+                     ]
+                  },
+               ]
+            },
+            
             {
                title: 'Keuken',
                width: 2,
